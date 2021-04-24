@@ -1,19 +1,16 @@
 const { ApolloServer } = require("apollo-server");
 const typeDefs = require("./schema");
-const resolvers = require('./resolvers');
-
-const LaunchAPI = require("./launchData");
+const resolvers = require("./resolvers");
+const dataSources = require("./dataSources");
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  dataSources: () => ({
-    launchAPI: new LaunchAPI(),
-  }),
+  dataSources,
 });
 
-server.listen().then(() => {
+server.listen().then(({ url }) => {
   console.log(`
-        Server is running, listening on port 4000
+        🚀 Server is running, listening on ${url}
     `);
 });
