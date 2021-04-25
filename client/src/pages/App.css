@@ -9,6 +9,11 @@
   align-items: center;
 }
 
+.logo {
+  width: 50%;
+  margin-bottom: 0.5rem;
+}
+
 .search-form {
   display: flex;
   width: 50%;
@@ -38,7 +43,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
   border: 1px solid gray;
   border-radius: 10px;
+}
+
+.h4 {
+  width: 100%;
+  border-radius: 10px;
+  background: #9b4dca;
+  color: white;
 }
