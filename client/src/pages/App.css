@@ -45,11 +45,27 @@
   align-items: center;
   border: 1px solid gray;
   border-radius: 10px;
+  background: #04aa6d;
+  color: white;
 }
 
-.h4 {
+.card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+h4 {
   width: 100%;
-  border-radius: 10px;
-  background: #9b4dca;
-  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #90e4ff;
+  font-weight: bold;
+  color: black;
+}
+
+.link-button {
+  background: ;
 }

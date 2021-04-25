@@ -18,13 +18,26 @@ const Results = ({ error, loading, data }) => {
           data.launchesBySearch.map(
             ({ missionName, launchDate, rocketName, videoLink }, index) => (
               <div className="card" key={`${videoLink}${index}`}>
-                <h4>Mission: {missionName}</h4>
-                <h5>Rocket: {rocketName}</h5>
-                <h6>{format(new Date(launchDate), "MM/dd/yyyy")}</h6>
+                <h4>{missionName} Mission</h4>
+                <div className="card-body">
+                  <div>
+                    <h3>
+                      Launch date:{" "}
+                      {format(new Date(launchDate), "MMMM dd, yyyy")}
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>Rocket: {rocketName}</h3>
+                  </div>
+                </div>
                 <div>
-                  Video link:{" "}
-                  <a target="_blank" rel="noreferrer" href={videoLink}>
-                    {videoLink}
+                  <a
+                    class="button"
+                    target="_blank"
+                    rel="noreferrer"
+                    href={videoLink}
+                  >
+                    Watch YouTube video of Flight >
                   </a>
                 </div>
               </div>
