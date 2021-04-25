@@ -44,6 +44,16 @@ class LaunchAPI extends RESTDataSource {
           .map((launch) => this.launchReducer(launch))
       : [];
   }
+
+  async getLaunchesBySearchTerm({ search }) {
+    const searchByYear = await this.getLaunchesByYear({ year: search });
+    const searchByRocket = await this.getLaunchesByRocket({ name: search });
+    const searchByMission = await this.getLaunchesByMission({ name: search });
+
+    if (searchByYear.length > 0) return searchByYear;
+    if (searchByRocket.length > 0) return searchByRocket;
+    if (searchByMission.length > 0) return searchByMission;
+  }
 }
 
 module.exports = () => ({

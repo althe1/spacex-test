@@ -13,6 +13,7 @@ const typeDefs = gql`
     launchesByYear(year: Int): [Launch]
     launchesByRocket(name: String): [Launch]
     launchesByMission(name: String): [Launch]
+    launchesBySearch(search: String): [Launch]
   }
 `;
 

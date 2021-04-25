@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.results-header {
+  text-align: center;
+}
+
+.results {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  flex-direction: row;
+  text-align: center;
+}
+
+.card {
+  height: 200px;
+  width: calc(48% - 30px);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}

@@ -8,5 +8,7 @@ module.exports = {
       dataSources.launchAPI.getLaunchesByRocket({ name }),
     launchesByMission: (_, { name }, { dataSources }) =>
       dataSources.launchAPI.getLaunchesByMission({ name }),
+    launchesBySearch: (_, { search }, { dataSources }) =>
+      dataSources.launchAPI.getLaunchesBySearchTerm({ search }),
   },
 };
